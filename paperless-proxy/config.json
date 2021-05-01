@@ -1,0 +1,37 @@
+{
+  "name": "Paperless Proxy",
+  "version": "1.0.0",
+  "slug": "paperless_proxy",
+  "description": "Access Paperless from within Home Assistant",
+  "url": "https://github.com/francoisfanuel/homeassistant-addons/",
+  "ingress": true,
+  "ingress_port": 80,
+  "panel_title": "Paperless",
+  "panel_icon": "mdi:file-document-multiple-outline",
+  "arch": [
+    "armhf",
+    "armv7",
+    "aarch64",
+    "amd64",
+    "i386"
+  ],
+  "startup": "application",
+  "boot": "auto",
+  "options": {
+    "paperless_host" : "null",
+    "paperless_port" : "null",
+    "ssl": {
+      "enabled": true,
+      "verify": false
+    }
+  },
+  "schema": {
+    "paperless_host" : "str",
+    "paperless_port" : "port",
+    "ssl": {
+      "enabled": "bool",
+      "verify": "bool"
+    }
+  },
+  "hassio_api": false
+}
